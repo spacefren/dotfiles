@@ -48,6 +48,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+font-family = JetBrains Mono Nerd Font
 theme = Atom One Dark
 background-opacity = 0.95
 confirm-close-surface = false
