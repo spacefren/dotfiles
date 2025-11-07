@@ -13,12 +13,12 @@ $character
 palette = 'colors'
 
 [palettes.colors]
-primary = '#8ad6b8'
-on_primary = '#003829'
-secondary = '#b3ccc0'
-on_secondary = '#1e352c'
-tertiary = '#a7cce0'
-on_tertiary = '#0a3445'
+primary = '{{colors.primary.default.hex}}'
+on_primary = '{{colors.on_primary.default.hex}}'
+secondary = '{{colors.secondary.default.hex}}'
+on_secondary = '{{colors.on_secondary.default.hex}}'
+tertiary = '{{colors.tertiary.default.hex}}'
+on_tertiary = '{{colors.on_tertiary.default.hex}}'
 
 [character]
 success_symbol = '[](fg:#00000 bg:#212736)'
