@@ -1,0 +1,142 @@
+configuration {
+    display-drun: "Launch";
+    display-calc: "Calculate";
+    display-filebrowser: "File browser";
+    font: "JetBrainsMono Nerd Font 10";
+    fixed-num-lines: false;
+	modes: "";
+
+	calc {
+        calc-error-color: 'Black';
+	}
+}
+
+@theme "/dev/null"
+@import "colors.rasi"
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    background-color: @surface-dim;
+    padding: 8px;
+    border-radius: 8px;
+    width: 600px;
+}
+
+mainbox {
+    background-color: @surface-dim;
+    spacing: 8px;
+}
+
+inputbar {
+    children:   [ textbox-search-icon, prompt, textbox-prompt-colon, entry ];
+    background-color: @surface-container-low;
+    text-color: @on-surface;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+textbox-search-icon {
+    str: "";
+    expand: false;
+    padding: 0px 6px 0px 0px;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+prompt {
+    padding-right: 0px;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    margin: 0px 4px 0px 0px;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+entry {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+message {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: @secondary;
+    text-color: @inverse-on-surface;
+}
+
+textbox {
+    background-color: transparent;
+    lines: 1;
+}
+
+listview {
+    scrollbar: true;
+    background-color: @surface-dim;
+    spacing: 8px;
+    lines: 8;
+}
+
+scrollbar {
+    background-color: @surface-container-low;
+    handle-color: @secondary;
+    border-radius: 4px;
+    handle-rounded-corners: true;
+}
+
+element {
+    padding: 8px;
+    spacing: 8px;
+    border-radius: 4px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: transparent;
+}
+
+element.normal.normal {
+    background-color: @surface-container-high;
+    text-color: @on-surface;
+}
+
+element.selected.normal {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element.alternate.normal {
+    background-color: @surface-container-highest;
+    text-color: @on-surface;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 8px;
+}
+
+button {
+    border-radius: 4px;
+    padding: 8px;
+    background-color: @surface-container-high;
+    text-color: @on-surface;
+}
+
+button.selected {
+    background-color: @secondary;
+    text-color: @inverse-on-surface;
+}

@@ -1,0 +1,98 @@
+{
+  "output": "HDMI-A-1",
+  "layer": "top",
+  "position": "top",
+  "margin-left": 8,
+  "margin-right": 8,
+  "margin-top": 8,
+  "margin-bottom": 0,
+  "spacing": 8,
+  "height": 25,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "bluetooth",
+    "pulseaudio",
+    "group/power",
+  ],
+
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5,
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "active": "*",
+    },
+  },
+  "hyprland/window": {
+    "format": " {class}",
+  },
+  "clock": {
+    "format": " {:%A %d, %H:%M}",
+    "format-alt": " {:%A, %B %d, %Y (%R)}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 8,
+  },
+  "bluetooth": {},
+  "memory": {
+    "interval": 10,
+    "format": " {}%",
+  },
+  "cpu": {
+    "format": " {usage}%",
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "    "],
+    },
+  },
+  "group/power": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 250,
+      "transition-left-to-right": false,
+    },
+    "modules": ["custom/shutdown", "custom/quit", "custom/reboot"],
+  },
+  "custom/quit": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exit",
+  },
+  "custom/reboot": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "reboot",
+  },
+  "custom/shutdown": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "shutdown now",
+  },
+}
