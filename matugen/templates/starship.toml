@@ -21,7 +21,8 @@ tertiary = '{{colors.tertiary.default.hex}}'
 on_tertiary = '{{colors.on_tertiary.default.hex}}'
 
 [character]
-success_symbol = '[](fg:#00000 bg:#212736)'
+success_symbol = '[❯](fg:primary)'
+error_symbol = '[❯](fg:primary)'
 
 [directory]
 style = "fg:on_secondary bg:secondary"

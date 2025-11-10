@@ -13,15 +13,16 @@ $character
 palette = 'colors'
 
 [palettes.colors]
-primary = '#8ad6b8'
-on_primary = '#003829'
-secondary = '#b3ccc0'
-on_secondary = '#1e352c'
-tertiary = '#a7cce0'
-on_tertiary = '#0a3445'
+primary = '#99ccfa'
+on_primary = '#003351'
+secondary = '#b8c8da'
+on_secondary = '#23323f'
+tertiary = '#d2bfe7'
+on_tertiary = '#382a4a'
 
 [character]
-success_symbol = '[](fg:#00000 bg:#212736)'
+success_symbol = '[❯](fg:primary)'
+error_symbol = '[❯](fg:primary)'
 
 [directory]
 style = "fg:on_secondary bg:secondary"
