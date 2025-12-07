@@ -13,12 +13,12 @@ $character
 palette = 'colors'
 
 [palettes.colors]
-primary = '#99ccfa'
-on_primary = '#003351'
-secondary = '#b8c8da'
-on_secondary = '#23323f'
-tertiary = '#d2bfe7'
-on_tertiary = '#382a4a'
+primary = '#a0cafd'
+on_primary = '#003258'
+secondary = '#bbc7db'
+on_secondary = '#253140'
+tertiary = '#d6bee4'
+on_tertiary = '#3b2948'
 
 [character]
 success_symbol = '[❯](fg:primary)'
