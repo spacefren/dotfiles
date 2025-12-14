@@ -16,7 +16,7 @@ window#waybar {
 #workspaces button {
     margin-right: 4px;
     padding: 0 4px;
-    background-color: @surface_container;
+    background-color: @background;
 }
 
 #workspaces > :last-child {
@@ -38,7 +38,7 @@ window#waybar {
 #custom-lock,
 #custom-reboot,
 #custom-quit {
-    background-color: @surface_container;
+    background-color: @background;
     padding: 0 4px;
     padding: 4px 8px;
 }

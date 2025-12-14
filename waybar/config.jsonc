@@ -1,5 +1,4 @@
 {
-  "output": "HDMI-A-1",
   "layer": "top",
   "position": "top",
   "margin-left": 8,
@@ -25,7 +24,7 @@
     },
     "format": "{icon}",
     "format-icons": {
-      "active": "*",
+      "active": "",
     },
   },
   "hyprland/window": {
