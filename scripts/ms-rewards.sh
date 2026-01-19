@@ -1,5 +1,4 @@
 #!/bin/bash
 
-cd MSRewards/
-source venv/bin/activate
-ghostty -e python main.py
+cd Microsoft-Rewards-Script/
+ghostty -e npm run start

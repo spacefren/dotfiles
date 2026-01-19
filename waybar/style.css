@@ -9,14 +9,27 @@
     border-radius: 4px;
 }
 
+button:hover {
+    border: inherit;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-image: none;
+    background-color: @surface_container_high;
+}
+
 window#waybar {
     background: transparent;
 }
 
 #workspaces button {
+    border: none;
     margin-right: 4px;
-    padding: 0 4px;
+    padding: 0 5px;
     background-color: @background;
+}
+
+#workspaces button:hover {
+    background-color: @surface_container_high;
 }
 
 #workspaces > :last-child {

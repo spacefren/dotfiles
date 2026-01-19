@@ -1,6 +1,15 @@
 #!/bin/bash
+selected=$(clipvault list | \
+    awk -F "\t" '{printf "%d | %s\n", NR, $2}' | \
+    rofi -dmenu -i -sync -p "Clipboard" | \
+    sed 's/^\([0-9]*\) |.*/\1/')
 
-# Don't judge, I'm new :sob:
-selected=$(clipvault list | awk -F "\t" '{print $2 "\t\t\t\t\t\t\t\t\t" $1}' | rofi -dmenu -i -sync -p "Clipboard" | awk -F "\t" '{print $10}')
-echo "$selected"
-[ -n "$selected" ] && clipvault get "$selected" | wl-copy | ydotool key 29:1 47:1 47:0 29:0
+if [ -n "$selected" ]; then
+    entry_id=$(clipvault list | awk -F "\t" -v line="$selected" 'NR==line {print $1}')
+
+    # Use process substitution to avoid corrupting binary data
+    wl-copy < <(clipvault get "$entry_id")
+
+    sleep 0.15
+    wtype -M ctrl v -m ctrl
+fi
