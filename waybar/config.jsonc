@@ -7,6 +7,7 @@
   "margin-bottom": 0,
   "spacing": 8,
   "height": 25,
+  "output": ["HDMI-A-1", "sunshine"],
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
@@ -19,6 +20,7 @@
   ],
 
   "hyprland/workspaces": {
+    "all-outputs": true,
     "persistent-workspaces": {
       "*": 5,
     },

@@ -18,14 +18,14 @@ for arg in "$@"; do
   esac
 done
 
-CURRENT_WALL=$(swww query | awk -F'image: ' '/currently displaying/ {print $2}')
+CURRENT_WALL=$(awww query | awk -F'image: ' '/currently displaying/ {print $2}')
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
 
 matugen image "$WALLPAPER"
 ln -sf "$WALLPAPER" "$WALLPAPER_DIR/.current-wallpaper"
 
 if [ "$NO_ANIM" = true ]; then
-  swww img "$WALLPAPER" --transition-type none
+  awww img "$WALLPAPER" --transition-type none
 else
-  swww img "$WALLPAPER" --transition-type center --transition-fps 60
+  awww img "$WALLPAPER" --transition-type center --transition-fps 60
 fi
