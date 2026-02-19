@@ -162,4 +162,21 @@ rules = [
     { name = "*/", fg = "{{colors.surface_tint.default.hex}}" },
 ]
 
+[icon]
+dirs = [
+    { name = "Code", text = "", fg = "{{colors.secondary.default.hex}}" },
+    { name = "Documents", text = "", fg = "{{colors.secondary.default.hex}}" },
+    { name = "Downloads", text = "", fg = "{{colors.secondary.default.hex}}" },
+    { name = "Music", text = "", fg = "{{colors.secondary.default.hex}}" },
+    { name = "Pictures", text = "", fg = "{{colors.secondary.default.hex}}" },
+    { name = "Videos", text = "", fg = "{{colors.secondary.default.hex}}" },
+    { name = "Sync", text = "", fg = "{{colors.secondary.default.hex}}" },
+]
+
+conds = [
+	{ if = "dir", text = "", fg = "{{colors.secondary.default.hex}}"  },
+# 	{ if = "!(dir | link)", text = "", fg = "{{colors.primary.default.hex}}" },
+# 	{ if = "hidden & dir", text = "", fg = "{{colors.tertiary.default.hex}}"  },
+]
+
 # : ]]]

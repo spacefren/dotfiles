@@ -21,6 +21,11 @@ window#waybar {
     background: transparent;
 }
 
+window > * {
+    padding: 8px;
+    padding-bottom: 0;
+}
+
 #workspaces button {
     border: none;
     margin-right: 4px;
@@ -50,7 +55,8 @@ window#waybar {
 #custom-shutdown,
 #custom-lock,
 #custom-reboot,
-#custom-quit {
+#custom-quit,
+#custom-lyrics {
     background-color: @background;
     padding: 0 4px;
     padding: 4px 8px;

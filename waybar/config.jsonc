@@ -1,14 +1,14 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-left": 8,
-  "margin-right": 8,
-  "margin-top": 8,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-top": 0,
   "margin-bottom": 0,
   "spacing": 8,
-  "height": 25,
+  "height": 33,
   "output": ["HDMI-A-1", "sunshine"],
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "custom/lyrics"],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
@@ -20,7 +20,6 @@
   ],
 
   "hyprland/workspaces": {
-    "all-outputs": true,
     "persistent-workspaces": {
       "*": 5,
     },
@@ -95,5 +94,21 @@
     "format": "",
     "tooltip": false,
     "on-click": "shutdown now",
+  },
+  "custom/lyrics": {
+    "return-type": "json",
+    "format": "{icon} {0}",
+    "hide-empty-text": true,
+    "format-icons": {
+      "playing": "",
+      "paused": "",
+      "lyric": "",
+      "music": "󰝚",
+      "no_lyric": "󰝚",
+      "getting": "",
+    },
+    "exec-if": "which waybar-lyric",
+    "exec": "waybar-lyric --quiet",
+    "on-click": "waybar-lyric play-pause",
   },
 }
