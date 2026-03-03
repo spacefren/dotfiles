@@ -13,7 +13,7 @@ if [ -z "$SCRIPTS" ]; then
 fi
 
 # Show them in a Rofi menu and capture the user's choice
-CHOICE=$(rofi -dmenu -sync -i -p "Run script" <<< "$SCRIPTS")
+CHOICE=$(vicinae dmenu -p "Run script" <<< "$SCRIPTS")
 
 # If the user cancelled or made no choice, exit
 [ -z "$CHOICE" ] && exit 0

@@ -1,29 +1,29 @@
 [config]
-# ...
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland.conf'
+input_path = '~/.config/hypr/colors.template.conf'
 output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
 [templates.waybar]
-input_path = '~/.config/matugen/templates/general.css'
+input_path = '~/.config/waybar/colors.template.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
-[templates.rofi]
-input_path = '~/.config/matugen/templates/rofi.rasi'
-output_path = '~/.config/rofi/colors.rasi'
-
 [templates.yazi]
-input_path = '~/.config/matugen/templates/yazi.toml'
+input_path = '~/.config/yazi/theme.template.toml'
 output_path = '~/.config/yazi/theme.toml'
 
 [templates.starship]
-input_path = '~/.config/matugen/templates/starship.toml'
-output_path = '~/.config/starship.toml'
+input_path = '~/.config/starship/starship.template.toml'
+output_path = '~/.config/starship/starship.toml'
 
 [templates.dunst]
-input_path = '~/.config/matugen/templates/dunstrc'
+input_path = '~/.config/dunst/dunstrc.template'
 output_path = '~/.config/dunst/dunstrc'
 post_hook = 'dunstctl reload'
+
+[templates.vicinae]
+input_path = '~/.config/vicinae/settings.template.toml'
+output_path = '~/.local/share/vicinae/themes/matugen.toml'
+post_hook = 'vicinae theme set matugen'

@@ -1,13 +1,14 @@
 format = """
-[🭨](fg:primary)\
+┌ [](fg:primary)\
 [󰣇 ](bg:primary fg:on_primary)\
-[🭬](bg:secondary fg:primary)\
+[](bg:secondary fg:primary)\
 $directory\
-[🭬](bg:tertiary fg:secondary)\
+[](bg:tertiary fg:secondary)\
 $git_branch\
 $git_status\
-[🭬](fg:tertiary)\
-$character
+[](fg:tertiary)\
+$line_break\
+└──$character\
 """
 
 palette = 'colors'
@@ -21,8 +22,8 @@ tertiary = '{{colors.tertiary.default.hex}}'
 on_tertiary = '{{colors.on_tertiary.default.hex}}'
 
 [character]
-success_symbol = '[❯](fg:primary)'
-error_symbol = '[❯](fg:primary)'
+success_symbol = '[](fg:primary)'
+error_symbol = '[](fg:primary)'
 
 [directory]
 style = "fg:on_secondary bg:secondary"
