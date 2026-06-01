@@ -1,4 +1,9 @@
-#!/usr/bin/bash
+#!/bin/bash
+
+# @vicinae.schemaVersion 1
+# @vicinae.title OCR
+# @vicinae.mode fullOutput
+# @vicinae.exec ["/bin/bash"]
 
 # Temporary files
 IMG="$(mktemp --suffix=.png)"

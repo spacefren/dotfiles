@@ -35,6 +35,9 @@
          "icon_theme": "auto"
       }
    },
+   "telemetry": {
+      "system_info": false
+   },
    "launcher_window": {
       "opacity": 1,
       "client_side_decorations": {
@@ -46,7 +49,6 @@
          "width": 770,
          "height": 480
       },
-      "dim_around": true,
       "blur": {
          "enabled": true
       },
@@ -84,7 +86,16 @@
       "files:search"
    ],
    "providers": {
+      "@FurkanTRN/store.vicinae.jetbrains-recent-projects": {
+         "preferences": {
+            "toolboxAppsDirInput": "",
+            "toolboxScriptsDirInput": ""
+         }
+      },
       "@Quentin23Soleil/store.raycast.adb": {
+         "preferences": {
+            "androidSDK": "~/Android/Sdk"
+         },
          "entrypoints": {
             "adb-clear-app-data": {
                "enabled": true
@@ -93,7 +104,13 @@
                "enabled": false
             },
             "adb-open-url": {
-               "enabled": false
+               "enabled": true
+            },
+            "adb-toggle-layout-bounds": {
+               "enabled": true
+            },
+            "adb-uninstall": {
+               "enabled": true
             },
             "adb-write": {
                "enabled": false
@@ -106,6 +123,13 @@
                "enabled": true
             },
             "generatePlaylist": {
+               "enabled": false
+            }
+         }
+      },
+      "@rastsislaux/store.vicinae.pulseaudio": {
+         "entrypoints": {
+            "configuration": {
                "enabled": false
             }
          }
@@ -126,12 +150,25 @@
          }
       },
       "browser-extension": {
-         "enabled": false
+         "enabled": true,
+         "entrypoints": {
+            "browse-tabs": {
+               "enabled": false
+            },
+            "shortcut-active-tab": {
+               "enabled": true
+            }
+         }
       },
       "calculator": {
          "preferences": {
             "backend": "soulver-core",
             "refreshRatesOnStartup": true
+         }
+      },
+      "clipboard": {
+         "preferences": {
+            "monitoring": true
          }
       },
       "core": {
@@ -157,6 +194,7 @@
          "enabled": false
       },
       "power": {
+         "enabled": true,
          "entrypoints": {
             "hibernate": {
                "enabled": false
@@ -182,10 +220,21 @@
          }
       },
       "scripts": {
+         "enabled": true,
          "preferences": {
             "customDirs": [
-               "/home/spacefren/.local/share/vicinae/scripts"
+               "/home/spacefren/.local/share/vicinae/scripts",
+               "/home/spacefren/.config/dotfiles/scripts"
             ]
+         }
+      },
+      "snippets": {
+         "preferences": {
+            "enabled": true,
+            "keyDelay": "2",
+            "layout": "",
+            "prePasteDelay": "0",
+            "undo": false
          }
       },
       "system": {
@@ -196,7 +245,12 @@
          }
       },
       "wm": {
-         "enabled": false
+         "enabled": false,
+         "entrypoints": {
+            "switch-windows": {
+               "enabled": true
+            }
+         }
       }
    }
 }

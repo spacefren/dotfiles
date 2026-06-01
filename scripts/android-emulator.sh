@@ -1,4 +1,9 @@
-#!/usr/bin/bash
+#!/bin/bash
+
+# @vicinae.schemaVersion 1
+# @vicinae.title Android Emulator
+# @vicinae.mode fullOutput
+# @vicinae.exec ["/bin/bash"]
 
 QT_QPA_PLATFORM=xcb \
 __GLX_VENDOR_LIBRARY_NAME=nvidia \

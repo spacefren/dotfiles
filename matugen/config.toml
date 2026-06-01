@@ -1,8 +1,8 @@
 [config]
 
 [templates.hyprland]
-input_path = '~/.config/hypr/colors.template.conf'
-output_path = '~/.config/hypr/colors.conf'
+input_path = '~/.config/hypr/colors.template.lua'
+output_path = '~/.config/hypr/colors.lua'
 post_hook = 'hyprctl reload'
 
 [templates.waybar]
