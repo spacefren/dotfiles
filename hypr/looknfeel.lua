@@ -50,6 +50,36 @@ hl.config({
     },
 })
 
+hl.workspace_rule({
+    workspace = "special:magic",
+    gaps_out = 40,
+})
+
+hl.window_rule({
+    name = "ignore-maximize-requests",
+    match = {
+        class = ".*"
+    },
+    suppress_event = "maximize"
+})
+
+hl.window_rule({
+    name = "switch-to-active-window",
+    match = {
+        class = ".*"
+    },
+    focus_on_activate = true,
+})
+
+hl.window_rule({
+    name = "fix-floating-size",
+    match = {
+        class = ".*",
+        float = true,
+    },
+    size = { "(monitor_w*0.5)", "(monitor_h*0.5)" }
+})
+
 -- Curves
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
 hl.curve("easeInOutCubic", { type = "bezier", points = { { 0.65, 0.05 }, { 0.36, 1 } } })

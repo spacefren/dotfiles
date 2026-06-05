@@ -14,12 +14,12 @@ $line_break\
 palette = 'colors'
 
 [palettes.colors]
-primary = '#a7c8ff'
-on_primary = '#03305f'
-secondary = '#bdc7dc'
-on_secondary = '#273141'
-tertiary = '#dbbde2'
-on_tertiary = '#3e2845'
+primary = '#96ccf8'
+on_primary = '#00344f'
+secondary = '#b7c9d9'
+on_secondary = '#22323f'
+tertiary = '#d0c0e8'
+on_tertiary = '#362b4a'
 
 [character]
 success_symbol = '[](fg:primary)'

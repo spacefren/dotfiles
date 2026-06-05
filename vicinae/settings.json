@@ -31,7 +31,7 @@
          "icon_theme": "auto"
       },
       "dark": {
-         "name": "matugen",
+         "name": "default",
          "icon_theme": "auto"
       }
    },

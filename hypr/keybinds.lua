@@ -5,7 +5,13 @@ local fileManager = "ghostty -e yazi"
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + B", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + B", function()
+    hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+    local newHeight = hl.get_active_monitor().height * 0.75
+    local newWidth = hl.get_active_monitor().width * 0.7
+    hl.dispatch(hl.dsp.window.resize({ x = newWidth, y = newHeight }))
+    hl.dispatch(hl.dsp.window.center())
+end)
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
@@ -14,6 +20,14 @@ hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
 hl.bind("ALT + Space", hl.dsp.exec_cmd("vicinae toggle"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("vicinae deeplink vicinae://launch/clipboard/history"))
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("vicinae deeplink vicinae://launch/core/search-emojis"))
+
+hl.bind("Print", hl.dsp.exec_cmd("grimblast copysave output ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png"))
+hl.bind("SHIFT + Print",
+    hl.dsp.exec_cmd("grimblast copysave area ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png"))
+hl.bind("ALT + Print",
+    hl.dsp.exec_cmd("grimblast -f copysave area ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("~/Scripts/ocr.sh"))
 
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
