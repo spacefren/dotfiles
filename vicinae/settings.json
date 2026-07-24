@@ -19,7 +19,11 @@
    "keybinding": "default",
    "pixmap_cache_mb": 50,
    "search_files_in_root": true,
+   "global_shortcuts": {
+      "toggle": "alt+SPACE"
+   },
    "font": {
+      "rendering": "qt",
       "normal": {
          "family": "Inter Variable",
          "size": 10.5
@@ -39,11 +43,12 @@
       "system_info": false
    },
    "launcher_window": {
-      "opacity": 1,
+      "opacity": 0.8,
       "client_side_decorations": {
          "enabled": true,
          "rounding": 10,
-         "border_width": 1
+         "border_width": 1,
+         "shadow_size": 12
       },
       "size": {
          "width": 770,
@@ -81,8 +86,15 @@
       "open-settings": "control+,",
       "toggle-action-panel": "control+B"
    },
-   "favorites": [],
+   "favorites": [
+      "applications:obsidian",
+      "applications:zen",
+      "applications:discord",
+      "applications:jetbrains-studio-5e4f4314-0f80-4775-a27e-3034064e43f4"
+   ],
    "fallbacks": [
+      "@rithvikvibhu/store.vicinae.arch-packages:search-arch-packages",
+      "shortcuts:sct-0ce59e158763",
       "files:search"
    ],
    "providers": {
@@ -124,6 +136,20 @@
             },
             "generatePlaylist": {
                "enabled": false
+            }
+         }
+      },
+      "@mmazzarolo/store.raycast.unicode-symbols": {
+         "preferences": {
+            "dataSet": "full",
+            "gridItemSize": "small",
+            "primaryAction": "paste",
+            "searchResultLimitStr": "100",
+            "viewType": "grid"
+         },
+         "entrypoints": {
+            "index": {
+               "shortcut": "super+,"
             }
          }
       },
@@ -169,6 +195,11 @@
       "clipboard": {
          "preferences": {
             "monitoring": true
+         },
+         "entrypoints": {
+            "history": {
+               "shortcut": "super+V"
+            }
          }
       },
       "core": {
@@ -182,6 +213,9 @@
             "prune-memory": {
                "enabled": false
             },
+            "search-emojis": {
+               "shortcut": "super+."
+            },
             "settings": {
                "enabled": true
             },
@@ -190,8 +224,20 @@
             }
          }
       },
+      "files": {
+         "entrypoints": {
+            "search": {
+               "shortcut": "super+F"
+            }
+         }
+      },
       "font": {
-         "enabled": false
+         "enabled": true,
+         "entrypoints": {
+            "browse": {
+               "enabled": true
+            }
+         }
       },
       "power": {
          "enabled": true,

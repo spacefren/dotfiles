@@ -12,15 +12,12 @@ hl.bind(mainMod .. " + B", function()
     hl.dispatch(hl.dsp.window.resize({ x = newWidth, y = newHeight }))
     hl.dispatch(hl.dsp.window.center())
 end)
+hl.bind("F11", hl.dsp.window.fullscreen())
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
-
-hl.bind("ALT + Space", hl.dsp.exec_cmd("vicinae toggle"))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("vicinae deeplink vicinae://launch/clipboard/history"))
-hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("vicinae deeplink vicinae://launch/core/search-emojis"))
 
 hl.bind("Print", hl.dsp.exec_cmd("grimblast copysave output ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png"))
 hl.bind("SHIFT + Print",
